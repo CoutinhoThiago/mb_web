@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  endpoint: 'http://18.222.127.0:8080' //'http://localhost:8080'
+  endpoint: 'http://52.15.61.91:8080' //'http://localhost:8080'
 }
