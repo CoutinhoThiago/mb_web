@@ -31,18 +31,7 @@ export class LoginComponent {
   }
 
   loginUser() {
-    this.loginService.login(this.dadosForm["login"].value, this.dadosForm["senha"].value).subscribe(
-      response => {
-        const token = response.token; // Extrai o token da resposta
-        localStorage.setItem('token', token); // Armazena o token no localStorage
-        // alert('Token armazenado com sucesso!' + '\r' + `Token: ${token}`);
-
-        this.router.navigate(['/home']);
-      },
-      err => {
-        alert('Ocorreu um erro');
-      }
-    );
+    this.router.navigate(['/home']);
   }
 
   togglePasswordVisibility(): void {
