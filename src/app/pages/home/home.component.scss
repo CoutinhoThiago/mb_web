@@ -1,0 +1,83 @@
+/* Estilos do conteúdo principal */
+.main-content {
+  margin-left: 150px;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para contraste */
+}
+
+/* Estilos do cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Título do cabeçalho */
+.header h1 {
+  font-size: 32px;
+  color: black;
+}
+
+/* Estilos do dashboard */
+.dashboard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+/* Estilo do título das seções no dashboard */
+.section-title-dashboard {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+/* Estilo do contêiner de valores */
+.value-container {
+  width: 100%;
+  background-color: white; /* Cor de fundo laranja escuro */
+  color: black; /* Texto branco para contraste */
+  border-radius: 8px;
+  //border: 1px solid darkorange;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo do valor */
+.value h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos dos ícones em contêineres */
+.icon-container {
+  background-color: black; /* Fundo preto para os ícones */
+  border-radius: 8px;
+  width: 80px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Estilo dos ícones */
+.icon {
+  font-size: 30px;
+  color: #ffa500;
+}
+
+/* Estilos para a divisão de Expenses e Incomes */
+.expenses-incomes-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Alinha Expenses e Incomes nos lados opostos */
+  align-items: flex-start; /* Alinha as bordas superiores dos componentes com as bordas das transações */
+  width: 100%;
+}

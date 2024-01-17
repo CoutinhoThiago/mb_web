@@ -1,0 +1,33 @@
+<div class="container-login">
+  <div class="container-login-central">
+    <div class="container-header">
+      <div class="titulo-login">Meu Bolso WEB</div>
+      <div class="info-login">Digite seu login e senha para logar!</div>
+    </div>
+    <div class="container-form">
+      <form class="form-inputs" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <div class="group-input">
+          <div class="text-info">Login</div>
+          <input class="input-form" type="text" id="login" placeholder="E-Mail" formControlName="login" required>
+          <label *ngIf="loginForm.get('login')?.errors?.['required'] && loginForm.get('login')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <div class="text-info">Senha</div>
+          <div class="password-input">
+            <input class="input-form" type="{{ showPassword ? 'text' : 'password' }}" #senha id="senha" placeholder="Senha" formControlName="senha" required>
+            <span class="show-password" (click)="togglePasswordVisibility()">👁️</span>
+          </div>
+          <label *ngIf="loginForm.get('senha')?.errors?.['required'] && loginForm.get('senha')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <input type="submit" class="btn-login" value="Login" [disabled]="!loginForm.valid">
+        </div>
+        <a href="/caminho-para-cadastro" class="link-cadastro">Não tem uma conta? Cadastre-se</a>
+      </form>
+    </div>
+  </div>
+</div>

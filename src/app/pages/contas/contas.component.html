@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+    <!-- Adicione a biblioteca Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Inclua o seu arquivo CSS personalizado -->
+    <link rel="stylesheet" href="contas.component.scss">
+</head>
+<body>
+    <div class="container">
+        <app-sidebar></app-sidebar>
+        <main class="main-content">
+            <header class="header">
+                <h1 class="app-name">Contas</h1>
+            </header>
+            <section class="dashboard">
+                <div class="contas-container">
+                    <!-- Modais dentro do contas-container -->
+                    <div class="saldo-total">
+                      <app-saldo-total [totalBalance]="totalBalance"></app-saldo-total>
+                  </div>
+
+                  <!-- Adicione o código das contas aqui -->
+                    <ng-container *ngFor="let conta of contas">
+                        <div class="conta-item">
+                            <app-conta
+                              [nome]="conta.banco.nome"
+                              [saldo]="conta.saldoAtual"
+                              [agencia]="conta.agencia"
+                              [numeroConta]="conta.numeroConta">
+                            </app-conta>
+                        </div>
+                    </ng-container>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

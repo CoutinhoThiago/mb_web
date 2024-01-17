@@ -1,0 +1,25 @@
+.finance-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-bottom: 20px; /* Espaço entre as seções */
+  width: 95%
+}
+
+.icon-container {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.material-icons {
+  font-size: 24px;
+  color: #333;
+  width: 95%
+}

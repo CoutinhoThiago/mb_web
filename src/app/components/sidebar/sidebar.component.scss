@@ -1,0 +1,68 @@
+/* Estilos adicionais para a imagem do logo */
+.logo {
+  max-width: 100%; /* Garante que a imagem se ajuste à largura da barra lateral */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 20px; /* Espaçamento abaixo do logo */
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+  width: 150px;
+  background-color: black;
+  padding: 20px 10px;
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto; /* Permite rolagem se o conteúdo for muito */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Estilos para itens de navegação */
+.nav-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: darkorange;
+  cursor: pointer; /* Indica que é clicável */
+}
+
+.nav-item .material-icons {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+  color: #FF8C00;
+}
+
+.nav-item .icon-label {
+  font-size: 14px;
+  color: darkorange;
+}
+
+/* Estilos para o botão de adicionar transação */
+.add-transaction-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkorange;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  cursor: pointer; /* Indica que é clicável */
+  transition: background-color 0.3s, transform 0.3s; /* Efeito de transição suave */
+}
+
+.add-transaction-btn:hover {
+  background-color: #e67e22; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.add-transaction-btn .material-icons {
+  font-size: 50px;
+  color: black;
+}

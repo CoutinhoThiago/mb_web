@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Bolso</title>
+  <!-- Adicione a biblioteca Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Inclua o seu arquivo CSS personalizado -->
+  <link rel="stylesheet" href="home.component.scss">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sempre mostrar a app-sidebar -->
+    <app-sidebar></app-sidebar>
+
+    <main class="main-content">
+      <header class="header">
+        <div class="header-content">
+          <h1 class="app-name">Home</h1>
+        </div>
+      </header>
+
+      <section class="dashboard">
+        <app-saldo-total [totalBalance]="balance"></app-saldo-total>
+
+        <div class="expenses-incomes-container">
+          <app-expenses style="flex: 1;"></app-expenses>
+          <app-incomes style="flex: 1;"></app-incomes>
+        </div>
+        <div class="expenses-incomes-container">
+          <app-investments style="flex: 1;"></app-investments>
+          <app-credit-card style="flex: 1;"></app-credit-card>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

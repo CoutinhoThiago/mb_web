@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Bolso - Transações</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="transacoes.component.scss">
+</head>
+<body>
+  <div class="container">
+    <app-sidebar></app-sidebar>
+
+    <main class="main-content">
+      <header class="header">
+        <div class="header-content">
+          <h1 class="app-name">Transações</h1>
+        </div>
+      </header>
+
+      <section class="dashboard">
+        <div class="expenses-incomes-container">
+          <app-expenses style="flex: 1;"></app-expenses>
+          <app-incomes style="flex: 1;"></app-incomes>
+        </div>
+
+        <!-- Conteúdo de Transações -->
+        <section class="transacoes">
+          <div class="transaction-container">
+            <!-- Loop para mostrar todas as transações -->
+            <div *ngFor="let transacao of transacoes" class="transaction-item">
+              <div class="transaction-info">
+                <!-- Parte esquerda: seta e valor -->
+                <div class="transaction-left">
+                  <div class="transaction-icon">
+                    <i class="material-icons" [style.color]="getIconColor(transacao.tipo)">{{ getIcon(transacao.tipo) }}</i>
+                  </div>
+                  <div class="transaction-amount" [style.color]="getAmountColor(transacao.tipo)">
+                    {{ transacao.valor | currency : 'BRL' }}
+                  </div>
+                </div>
+                <!-- Parte central: categoria e subcategoria -->
+                <div class="transaction-center">
+                  <div class="transaction-category">
+                    {{ transacao.categoria !== 'null' ? transacao.categoria : '' }}
+                  </div>
+                  <div class="transaction-subcategory">
+                    {{ transacao.subCategoria !== 'null' ? transacao.subCategoria : '' }}
+                  </div>
+                </div>
+                <!-- Parte direita: data -->
+                <div class="transaction-right">
+                  <div class="transaction-date">
+                    {{ splitDateTime(transacao.dataHora).date }} <!-- Mostra apenas a data -->
+                  </div>
+                  <div class="transaction-time">
+                    {{ splitDateTime(transacao.dataHora).time }} <!-- Mostra apenas a hora -->
+                  </div>
+                </div>
+              </div>
+              <!-- Descrição na linha de baixo -->
+              <div class="transaction-description">
+                {{ transacao.dscricao }}
+              </div>
+            </div>
+            <!-- Fim do loop -->
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

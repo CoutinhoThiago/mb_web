@@ -1,0 +1,93 @@
+/* Estilos do conteúdo principal */
+.main-content {
+  margin-left: 150px;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para contraste */
+}
+
+/* Estilos do cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Título do cabeçalho */
+.header h1 {
+  font-size: 32px;
+  color: black;
+}
+
+/* Estilos do dashboard */
+.dashboard {
+  flex: 1, 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+
+
+/* Estilo do título das seções no dashboard */
+.section-title-dashboard {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Estilo do contêiner de valores */
+.value-container {
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilo do valor */
+.value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilos dos ícones em contêineres */
+.icon-container {
+  background-color: #333;
+  border-radius: 50%; /* Forma de círculo */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Estilo dos ícones */
+.icon {
+  font-size: 30px;
+  color: #fff; /* Ícone branco para contraste */
+}
+
+/* Estilo para a lista de contas */
+.conta-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo para cada item de conta */
+.conta-item {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

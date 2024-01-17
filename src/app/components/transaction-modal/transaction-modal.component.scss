@@ -1,0 +1,308 @@
+/* Estilos básicos */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-login-central {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 90%;
+}
+
+.titulo-login {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info-login {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.group-input {
+  margin-bottom: 20px;
+}
+
+.text-info {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+
+.error-input {
+  color: red;
+  font-size: 12px;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: darkorange;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #e65c00;
+}
+
+.btn-login.disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+/* Estilo para o ícone de olho (mostrar senha) */
+.password-input {
+  position: relative;
+}
+
+.show-password {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333;
+}
+
+.show-password:hover {
+  color: darkorange;
+}
+
+/* Link para a tela de cadastro */
+.link-cadastro {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: darkorange;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link-cadastro:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o modal de transação */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000bf;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixed-select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+}
+
+/* Adicione o estilo para o ícone "x" */
+.fixed-select .clear-select {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333;
+}
+
+.fixed-select:hover .clear-select {
+  display: inline; /* Altere de "block" para "inline" */
+  color: darkorange;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 30px;
+  color: #ff6347;
+}
+
+.modal-body {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"], input[type="date"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+select.placeholder {
+  color: #aaa;
+}
+
+select, input[type="text"], input[type="date"] {
+  color: #444;
+}
+
+select option[disabled] {
+  display: none;
+}
+
+.select-wrapper {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.select-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.clear-select {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333;
+  display: none;
+}
+
+.clear-select:hover {
+  color: darkorange;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #32cd32;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.submit-button:hover {
+  background-color: #28a745;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.clear-button {
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: #e0e0e0;
+}
+
+.clear-button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: default;
+}
+
+#subCategoria:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.fixed-select:hover #clearCategoria,
+.fixed-select:hover #clearSubCategoria {
+  display: inline;
+  color: darkorange;
+}

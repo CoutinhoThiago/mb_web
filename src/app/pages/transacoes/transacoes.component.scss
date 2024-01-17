@@ -1,0 +1,117 @@
+/* Estilos do conteúdo principal */
+.main-content {
+  margin-left: 150px;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para contraste */
+}
+
+/* Estilos do cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  color: black;
+}
+
+/* Estilos do dashboard */
+.dashboard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+/* Conteúdo de Transações */
+.transacoes {
+  margin-top: 10px; /* Adicione margem para criar espaço entre a barra lateral e o conteúdo */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; /* Alinha Expenses e Incomes nos lados opostos */
+}
+
+/* Estilo para as transações */
+.transaction-container {
+  width: 100%; /* Ocupa a largura total do container */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column; /* Para as transações se ajustarem verticalmente */
+}
+
+/* Style for each transaction item (keep your existing styles) */
+.transaction-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Para ocupar a largura total do container */
+}
+
+/* Estilo do ícone de seta de entrada/saída */
+.transaction-icon {
+  font-size: 40px;
+}
+
+/* Estilo para o valor da transação */
+.transaction-amount {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left; /* Alinha à esquerda */
+}
+
+/* Estilo para a data da transação */
+.transaction-date {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Estilo para a linha superior do item de transação */
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para a parte esquerda (seta e valor) */
+.transaction-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para o centro (categoria e subcategoria) */
+.transaction-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilo para a direita (data) */
+.transaction-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Estilo para a descrição na linha de baixo */
+.transaction-description {
+  margin-top: 10px;
+  text-align: start;
+  margin: 10px;
+}
+
+/* Estilos para a divisão de Expenses e Incomes */
+.expenses-incomes-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Alinha Expenses e Incomes nos lados opostos */
+  align-items: flex-start; /* Alinha as bordas superiores dos componentes com as bordas das transações */
+  width: 100%;
+}

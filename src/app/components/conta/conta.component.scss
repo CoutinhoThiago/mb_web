@@ -1,0 +1,34 @@
+/* Estilo para cada banco */
+.bank {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o nome do banco */
+.bank-name {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilo para o saldo do banco */
+.bank-balance {
+  font-size: 18px;
+  font-weight: bold;
+  color: black; /* Cor azul para saldo positivo */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Estilo para informações da agência e conta */
+.bank-info {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin: 5px 0;
+}
