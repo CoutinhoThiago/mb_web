@@ -9,7 +9,8 @@ import { ExpensesComponent } from '../components/sections/expenses/expenses.comp
 import { IncomesComponent } from '../components/sections/incomes/incomes.component';
 import { InvestmentsComponent } from '../components/sections/investments/investments.component';
 import { CreditCardComponent } from '../components/sections/credit-card/credit-card.component';
-import { TransactionModalComponent } from '../components/transaction-modal/transaction-modal.component';
+import { TransactionModalComponent } from '../components/cadastro/transaction-modal/transaction-modal.component';
+import { ContaModalComponent } from '../components/cadastro/conta-modal/conta-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TransactionModalComponent } from '../components/transaction-modal/trans
     InvestmentsComponent,
     CreditCardComponent,
     TransactionModalComponent,
+    ContaModalComponent,
   ],
   imports: [
     MatIconModule,
@@ -35,7 +37,8 @@ import { TransactionModalComponent } from '../components/transaction-modal/trans
     IncomesComponent,
     InvestmentsComponent,
     CreditCardComponent,
-    TransactionModalComponent, // Certifique-se de incluir o TransactionModalComponent aqui
+    TransactionModalComponent,
+    ContaModalComponent
   ],
 })
 export class SharedModule {}

@@ -1,5 +1,5 @@
 // src/app/sidebar/sidebar.component.ts
-import { TransactionModalComponent } from '../transaction-modal/transaction-modal.component';
+import { TransactionModalComponent } from '../cadastro/transaction-modal/transaction-modal.component';
 import { Component, ViewChild } from '@angular/core';
 
 @Component({

@@ -1,0 +1,64 @@
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Nova Transação</h5>
+      <button class="close-button" (click)="toggleModal()">&times;</button>
+    </div>
+    <div class="modal" *ngIf="showModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Nova Transação</h5>
+          <button class="close-button" (click)="toggleModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form (submit)="onSubmit()" name="transactionForm">
+            <div class="form-group">
+              <label for="valor">Valor:</label>
+              <input type="text" id="valor" name="valor" [(ngModel)]="transaction.valor" [ngModelOptions]="{ standalone: true }">
+            </div>
+
+            <div class="form-group">
+              <label for="data">Data:</label>
+              <input type="date" id="data" name="data" [(ngModel)]="transaction.data" [ngModelOptions]="{ standalone: true }">
+            </div>
+
+            <div class="form-group">
+              <label for="conta">Conta:</label>
+              <select id="conta" name="conta" [(ngModel)]="transaction.contaId">
+                  <option *ngFor="let conta of contas" [value]="conta.id" [title]="'Banco: ' + conta.banco.nome + '\nAgência: ' + conta.agencia + '\nNúmero: ' + conta.numero">
+                      {{ conta.banco.nome }} - Agência: {{ conta.agencia }} - Número: {{ conta.numero }}
+                  </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="categoria">Categoria:</label>
+              <div class="select-wrapper">
+                <select id="categoria" name="categoria" [(ngModel)]="transaction.categoriaId" (change)="onCategoriaChange($event)" class="fixed-select">
+                  <option *ngFor="let categoria of categorias" [value]="categoria.categoriaId">{{ categoria.nome }}</option>
+                </select>
+                <button type="button" class="clear-button" (click)="limparCategoria()">Limpar Categoria</button>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subCategoria">Subcategoria:</label>
+              <div class="select-wrapper">
+                <select id="subCategoria" name="subCategoria" [(ngModel)]="transaction.subCategoriaId" [disabled]="!transaction.categoriaId" class="fixed-select">
+                  <option *ngFor="let subCategoria of subCategorias" [value]="subCategoria.id">{{ subCategoria.nome }}</option>
+                </select>
+                <button type="button" class="clear-button" (click)="limparSubCategoria()">Limpar Subcategoria</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao" [(ngModel)]="transaction.descricao" [ngModelOptions]="{ standalone: true }">
+            </div>
+
+            <button type="submit" class="submit-button" [disabled]="!isFormValid()">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>

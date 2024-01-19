@@ -1,0 +1,32 @@
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <span class="close-button" (click)="toggleModal()">&times;</span>
+    <form>
+      <h2>Cadastro de Conta Bancária</h2>
+
+      <div class="form-group">
+        <label for="banco">Banco:</label>
+        <select id="banco" name="banco" required [(ngModel)]="bancoSelecionado">
+          <option *ngFor="let banco of bancos" [value]="banco.id">{{ banco.nome }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="agencia">Agência:</label>
+        <input type="text" [(ngModel)]="agencia" id="agencia" name="agencia" required>
+      </div>
+
+      <div class="form-group">
+        <label for="numeroConta">Número da Conta:</label>
+        <input type="text" [(ngModel)]="numeroConta" id="numeroConta" name="numeroConta" required>
+      </div>
+
+      <div class="form-group">
+        <label for="saldoInicial">Saldo Inicial:</label>
+        <input type="number" [(ngModel)]="saldoInicial" id="saldoInicial" name="saldoInicial" required>
+      </div>
+
+      <button type="submit" [disabled]="!isFormValid()">Cadastrar</button>
+    </form>
+  </div>
+</div>

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContaService } from '../../services/conta.service';
+import { ContaModalComponent } from '../../components/cadastro/conta-modal/conta-modal.component';
+
 
 @Component({
   selector: 'app-contas',
@@ -7,6 +9,8 @@ import { ContaService } from '../../services/conta.service';
   styleUrls: ['./contas.component.scss']
 })
 export class ContasComponent implements OnInit {
+  @ViewChild(ContaModalComponent, { static: false }) mostrarModalCadastro: ContaModalComponent;
+
   totalBalance: number = 0;
   contas: any[] = [];
 
@@ -16,7 +20,7 @@ export class ContasComponent implements OnInit {
     this.fetchData();
   }
 
-  fetchData() {
+  fetchData(): void {
     this.contaService.listarContas().subscribe(
       (data: any) => {
         const contas = data.content;
@@ -27,5 +31,10 @@ export class ContasComponent implements OnInit {
         console.error('Erro ao buscar dados das contas', error);
       }
     );
+  }
+
+  abrirModal(): void {
+    console.log("teste abrir modal");
+    this.mostrarModalCadastro.toggleModal();
   }
 }
