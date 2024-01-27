@@ -1,0 +1,118 @@
+/* Estilos básicos */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Ajustado para um fundo claro */
+  color: #333; /* Cor do texto mais escura para contraste */
+}
+
+.container-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-cadastro-central {
+  background-color: #fff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais sutil */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  width: 300px;
+}
+
+.titulo-cadastro {
+  font-size: 24px; /* Tamanho um pouco menor */
+  color: #333; /* Cor mais escura para título */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info-cadastro {
+  font-size: 14px;
+  color: #666; /* Cor mais suave para informação */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.group-input {
+  margin-bottom: 20px;
+}
+
+.text-info {
+  font-size: 16px;
+  color: #333; /* Cor mais escura para texto */
+  margin-bottom: 10px;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Borda mais clara */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff; /* Fundo branco */
+  color: #333; /* Cor do texto mais escura */
+}
+
+.error-input {
+  color: red;
+  font-size: 12px;
+}
+
+.btn-cadastro {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: darkorange; /* Cor alterada para se assemelhar à tela de transações */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-cadastro:hover {
+  background-color: #e65c00; /* Cor de hover mais escura */
+}
+
+.btn-cadastro.disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+/* Estilo para o ícone de olho (mostrar senha) */
+.password-input {
+  position: relative;
+}
+
+.show-password {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333; /* Cor do ícone */
+}
+
+.show-password:hover {
+  color: darkorange; /* Cor de hover */
+}
+
+/* Link para a tela de cadastro */
+.link-cadastro {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: darkorange; /* Cor do link */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link-cadastro:hover {
+  text-decoration: underline;
+}

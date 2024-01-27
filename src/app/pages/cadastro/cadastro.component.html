@@ -1,0 +1,65 @@
+<div class="container-cadastro">
+  <div class="container-cadastro-central">
+    <div class="container-header">
+      <div class="titulo-cadastro">Meu Bolso WEB</div>
+      <div class="info-cadastro">Preencha o formulário para cadastrar-se</div>
+    </div>
+    <div class="container-form">
+      <form class="form-inputs">
+        <div class="group-input">
+          <div class="text-info">Nome</div>
+          <div class="password-input">
+            <input class="input-form" type="{{ showPassword ? 'text' : 'password' }}" #senha id="senha" placeholder="Nome" formControlName="senha" required>
+
+          </div>
+          <label *ngIf="cadastroForm.get('senha')?.errors?.['required'] && cadastroForm.get('senha')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <div class="text-info">CPF</div>
+          <div class="password-input">
+            <input class="input-form" type="{{ showPassword ? 'text' : 'password' }}" #senha id="senha" placeholder="CPF" formControlName="senha" required>
+
+          </div>
+          <label *ngIf="cadastroForm.get('senha')?.errors?.['required'] && cadastroForm.get('senha')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+
+
+        <div class="group-input">
+          <div class="text-info">E-Mail</div>
+          <input class="input-form" type="text" id="cadastro" placeholder="E-Mail" formControlName="cadastro" required>
+          <label *ngIf="cadastroForm.get('cadastro')?.errors?.['required'] && cadastroForm.get('cadastro')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <div class="text-info">Senha</div>
+          <div class="password-input">
+            <input class="input-form" type="{{ showPassword ? 'text' : 'password' }}" #senha id="senha" placeholder="Senha" formControlName="senha" required>
+
+          </div>
+          <label *ngIf="cadastroForm.get('senha')?.errors?.['required'] && cadastroForm.get('senha')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <div class="text-info">Confirme sua senha</div>
+          <div class="password-input">
+            <input class="input-form" type="{{ showPassword ? 'text' : 'password' }}" #senha id="senha" placeholder="Senha" formControlName="senha" required>
+
+          </div>
+          <label *ngIf="cadastroForm.get('senha')?.errors?.['required'] && cadastroForm.get('senha')?.touched" class="error-input">
+            Campo Obrigatório!
+          </label>
+        </div>
+        <div class="group-input">
+          <input type="submit" class="btn-cadastro" value="cadastro" [disabled]="!cadastroForm.valid">
+        </div>
+        <a href="/login" class="link-cadastro">Já é cadastrado? Faça o login</a>
+      </form>
+    </div>
+  </div>
+</div>
